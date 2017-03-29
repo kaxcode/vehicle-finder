@@ -1,24 +1,29 @@
-# README
+# Purpose
+Creating a series of webpages that searches for listings that match a potential Buyer’s input from a web form.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Features
+- A buyer should be able to select the type of vehicle I’m interesting in buying, enter some keywords, and a price range in their search.
+- A buyer should be redirected to a page that has all the listing that match the criteria entered in the search form. The listing should display a thumbnail of the first image, the year, make, & model of each Listing.
+- A buyer should be able to click on the anywhere in the listing and be redirected to a detailed overview of a Listing.
+- The detailed overview should also display the Seller's reviews.
+- The detailed overview should also display the Seller's email that's a mailto. This way the Buyer can easily contact the Seller.
 
-Things you may want to cover:
+# How
 
-* Ruby version
+- Controllers
+  - reviews
+  - listings
+  - users
+  - search
+  - session (omniauth)
+  - welcome (homepage)
 
-* System dependencies
+- Models
+  - Listing
+  - User
+  - Review
 
-* Configuration
+- Gems/APIs
+  - devise (for user authentication)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#Result
