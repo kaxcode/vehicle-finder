@@ -1,0 +1,22 @@
+.page-header
+  = link_to new_listing_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Listing
+%h1 Listing listings
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Year
+        %th Make
+        %th Model
+        %th Description
+        %th Price
+        %th Color
+        %th Transmission
+        %th Body type
+        %th{colspan: 3}
+
+    %tbody.table-body
+      = render @listings
