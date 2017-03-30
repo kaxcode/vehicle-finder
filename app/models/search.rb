@@ -1,4 +1,6 @@
 class Search < ApplicationRecord
+  VEHICLES = [ "", "Motorcycle", "Truck", "Car", "RV" ]
+
   def listings
     @listings ||= advanced_search
   end
