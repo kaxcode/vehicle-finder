@@ -29,7 +29,9 @@
             VehicleFinder
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li.active
+            %li.dropdown
+              = link_to "Search", new_search_path
+
           %ul.nav.navbar-nav.navbar-right
             %li
               - if user_signed_in?

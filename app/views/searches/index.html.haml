@@ -1,0 +1,18 @@
+.page-header
+  = link_to new_search_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Search
+%h1 Listing searches
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Keyword
+        %th Vehicle type
+        %th Min price
+        %th Max price
+        %th{colspan: 3}
+
+    %tbody.table-body
+      = render @searches
