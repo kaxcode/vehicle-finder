@@ -5,14 +5,14 @@
   = link_to edit_search_path(@search), class: 'btn btn-primary' do
     %span.glyphicon.glyphicon-pencil
     Edit
-  %h1 Show search
+  %h1 Search Results
 
-%dl.dl-horizontal
-  %dt Keyword:
-  %dd= @search.keyword
-  %dt Vehicle type:
-  %dd= @search.vehicle_type
-  %dt Min price:
-  %dd= @search.min_price
-  %dt Max price:
-  %dd= @search.max_price
+  %dl.dl-horizontal
+    %dt Keyword:
+    %dd= @search.keyword
+    %dt Vehicle type:
+    %dd= @search.vehicle_type
+    %dt Min price:
+    %dd= @search.min_price
+    %dt Max price:
+    %dd= @search.max_price
