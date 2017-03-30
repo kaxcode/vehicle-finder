@@ -11,13 +11,8 @@ class SearchesController < ApplicationController
 
   # POST /searches
   def create
-    @search = Search.new(search_params)
-
-    if @search.save
-      redirect_to @search, notice: 'Search was successfully created.'
-    else
-      render :new
-    end
+    @search = Search.create!(params[:search])
+    redirect_to @search
   end
 
   private

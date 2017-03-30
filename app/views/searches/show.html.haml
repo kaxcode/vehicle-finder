@@ -7,12 +7,13 @@
     Edit
   %h1 Search Results
 
-  %dl.dl-horizontal
-    %dt Keyword:
-    %dd= @search.keyword
-    %dt Vehicle type:
-    %dd= @search.vehicle_type
-    %dt Min price:
-    %dd= @search.min_price
-    %dt Max price:
-    %dd= @search.max_price
+  = render @search.listings
+  -# %dl.dl-horizontal
+  -#   %dt Keyword:
+  -#   %dd= @search.keyword
+  -#   %dt Vehicle type:
+  -#   %dd= @search.vehicle_type
+  -#   %dt Min price:
+  -#   %dd= @search.min_price
+  -#   %dt Max price:
+  -#   %dd= @search.max_price
