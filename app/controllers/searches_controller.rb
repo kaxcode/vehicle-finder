@@ -11,7 +11,7 @@ class SearchesController < ApplicationController
 
   # POST /searches
   def create
-    @search = Search.create!(params[:search])
+    @search = Search.create(search_params)
     redirect_to @search
   end
 
