@@ -1,4 +1,5 @@
 class ListingsController < ApplicationController
+  # before_action :authenticate_user!, except:  [:index, :show]
   # GET /listings
   def index
     @listings = Listing.all
@@ -50,6 +51,6 @@ class ListingsController < ApplicationController
   private
     # Only allow a trusted parameter "white list" through.
     def listing_params
-      params.require(:listing).permit(:year, :make, :model, :description, :price, :color, :transmission, :body_type)
+      params.require(:listing).permit(:year, :make, :model, :description, :price, :color, :transmission, :body_type, :vehicle_type)
     end
 end
