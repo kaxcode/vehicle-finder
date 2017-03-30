@@ -1,0 +1,31 @@
+= form_for @search, html: { class: "form-horizontal", role: "form" } do |f|
+  -if @search.errors.any?
+    .alert.alert-danger.alert-dismissable{role: "alert"}
+      %button.close{type: "button", data: {dismiss: "alert"} }
+        %span{aria: {hidden: "true"} } &times;
+        %span.sr-only Close
+      %h4= "#{pluralize(@search.errors.count, "error")} prohibited this search from being saved:"
+
+      %ul
+        - @search.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :keyword, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :keyword, class: 'form-control'
+  .form-group
+    = f.label :vehicle_type, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.select :vehicle_type, options_for_select(Search::VEHICLES, params[:vehicle_type]), class: 'form-control'
+  .form-group
+    = f.label :min_price, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.number_field :min_price, size: 10, class: 'form-control'
+  .form-group
+    = f.label :max_price, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.number_field :max_price, size: 10, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit class: 'btn btn-primary'

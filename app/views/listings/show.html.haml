@@ -1,5 +1,5 @@
 .page-header
-  = link_to listings_path, class: 'btn btn-default' do
+  = link_to root_path, class: 'btn btn-default' do
     %span.glyphicon.glyphicon-list-alt
     Back
   = link_to edit_listing_path(@listing), class: 'btn btn-primary' do
@@ -24,3 +24,5 @@
   %dd= @listing.transmission
   %dt Body type:
   %dd= @listing.body_type
+  %dt Vehichle type:
+  %dd= @listing.vehicle_type

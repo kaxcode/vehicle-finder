@@ -1,0 +1,31 @@
+.page-header
+  = link_to root_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_search_path(@search), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Search Results
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th Year
+      %th Make
+      %th Model
+      %th Description
+      %th Price
+      %th Color
+      %th Transmission
+      %th Body type
+      %th Vehicle type
+  - @search.listings.each do |listing|
+    %tr
+      %td= listing.year
+      %td= listing.make
+      %td= listing.model
+      %td= listing.description
+      %td= listing.price
+      %td= listing.color
+      %td= listing.transmission
+      %td= listing.body_type
+      %td= listing.vehicle_type
