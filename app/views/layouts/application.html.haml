@@ -25,12 +25,11 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "#", class: "navbar-brand" do
+          = link_to root_path, class: "navbar-brand" do
             VehicleFinder
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              = link_to "Home", "#"
           %ul.nav.navbar-nav.navbar-right
             %li
               - if user_signed_in?
