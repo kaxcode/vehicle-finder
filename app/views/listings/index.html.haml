@@ -13,3 +13,12 @@
             = listing.make
           %span.h3
             = listing.model
+          %span
+            = link_to listing do
+              %span.glyphicon.glyphicon-ok
+          %span
+            = link_to edit_listing_path(listing) do
+              %span.glyphicon.glyphicon-pencil
+          %span
+            = link_to listing, data: { confirm: 'Are you sure?' }, method: :delete do
+              %span.glyphicon.glyphicon-remove

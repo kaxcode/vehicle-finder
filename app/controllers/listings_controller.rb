@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :authenticate_user!, except:  [:index, :show]
+  before_action :authenticate_user!, except: [:index]
   # GET /listings
   def index
     @listings = Listing.all
@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
   # POST /listings
   def create
     @listing = Listing.new(listing_params)
+    @listing.user_id = current_user
 
     if @listing.save
       redirect_to @listing, notice: 'Listing was successfully created.'
