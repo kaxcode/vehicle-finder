@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   SELLERS = [ "", "Dealer", "Broker", "Private Party" ]
+
+  has_many :listings
 end
