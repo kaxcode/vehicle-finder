@@ -7,4 +7,5 @@ class User < ApplicationRecord
   SELLERS = [ "", "Dealer", "Broker", "Private Party" ]
 
   has_many :listings
+  has_many :reviews
 end
