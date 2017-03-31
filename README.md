@@ -1,3 +1,5 @@
+Tryout the app: https://shrouded-basin-35052.herokuapp.com/
+
 # Purpose
 Creating a series of webpages that searches for listings that match a potential Buyer’s input from a web form.
 
@@ -13,17 +15,18 @@ Creating a series of webpages that searches for listings that match a potential 
 - Controllers
   - reviews
   - listings
-  - users
   - search
-  - session (omniauth)
-  - welcome (homepage)
 
 - Models
   - Listing
+  - Seach
   - User
   - Review
 
 - Gems/APIs
   - devise (for user authentication)
+  - refile (for image attachments)
 
 #Result
+
+https://shrouded-basin-35052.herokuapp.com/
