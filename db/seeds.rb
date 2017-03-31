@@ -154,3 +154,40 @@ listing_10 = Listing.create!(
   vehicle_image: File.open(Rails.root.join("db/seeds/van.jpg")),
   user:codi_keech
 )
+
+# Creates reviews
+
+review_1 = Review.create!(
+  review_body: "Awesome vehicles",
+  user: codi_keech
+)
+
+review_2 = Review.create!(
+  review_body: "Really friendly and honest",
+  user: codi_keech
+)
+
+review_3 = Review.create!(
+  review_body: "Really nice",
+  user: jermaine_lewellyn
+)
+
+review_4 = Review.create!(
+  review_body: "Great service",
+  user:lavern_weldy
+)
+
+review_5 = Review.create!(
+  review_body: "Super friendly and the vehicle was in great condition",
+  user:lavern_weldy
+)
+
+review_6 = Review.create!(
+  review_body: "Nice exchange",
+  user:raymond_courchesne
+)
+
+review_7 = Review.create!(
+  review_body: "Friendly and knowledgeable",
+  user:rolando_mackenzie
+)
