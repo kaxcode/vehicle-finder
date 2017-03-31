@@ -2,11 +2,13 @@ class ReviewsController < ApplicationController
   # GET /reviews
   def index
     @reviews = Review.all
+    @users = User.all
   end
 
   # GET /reviews/1
   def show
     @review = Review.find(params[:id])
+    @users = User.all
   end
 
   # GET /reviews/new
