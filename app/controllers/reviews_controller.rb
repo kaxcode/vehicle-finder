@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   # GET /reviews
   def index
-    @reviews = Review.all
+    @reviews = Review.where(user_id: params[:user_id])
     @users = User.all
   end
 

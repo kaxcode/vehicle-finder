@@ -22,7 +22,7 @@
   %dt Seller's Email:
   %dd= mail_to @listing.user.email, "Contact Seller", subject: "Hi, I'm interested in your listing"
   %dt Seller's Reviews:
-  %dd= link_to "Reviews", reviews_path(@listing.user)
+  %dd= link_to "Reviews", reviews_path(user_id: @listing.user.id)
   .img-thumbnail{:style => "border:none; background:white;"}
     .image-container.img
-      = image_tag attachment_url(@listing, :vehicle_image), size: "540x380"
+      = image_tag attachment_url(@listing, :vehicle_image), size: "520x380"
