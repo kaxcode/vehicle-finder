@@ -17,3 +17,10 @@
   %dd= @listing.body_type
   %dt Vehichle type:
   %dd= @listing.vehicle_type
+  %dt Seller's Name:
+  %dd= @listing.user.name
+  %dt Seller's Email:
+  %dd= mail_to @listing.user.email, "Contact Seller", subject: "Hi, I'm interested in your listing"
+  .img-thumbnail{:style => "border:none; background:white;"}
+    .image-container.img
+      = image_tag attachment_url(@listing, :vehicle_image), size: "480x380"

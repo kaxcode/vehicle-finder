@@ -1,31 +1,20 @@
 .page-header
-  = link_to root_path, class: 'btn btn-default' do
+  = link_to new_search_path, class: 'btn btn-default' do
     %span.glyphicon.glyphicon-list-alt
     Back
-  = link_to edit_search_path(@search), class: 'btn btn-primary' do
-    %span.glyphicon.glyphicon-pencil
-    Edit
   %h1 Search Results
-%table.table.table-striped.table-bordered.table-hover
-  %thead
-    %tr
-      %th Year
-      %th Make
-      %th Model
-      %th Description
-      %th Price
-      %th Color
-      %th Transmission
-      %th Body type
-      %th Vehicle type
-  - @search.listings.each do |listing|
-    %tr
-      %td= listing.year
-      %td= listing.make
-      %td= listing.model
-      %td= listing.description
-      %td= listing.price
-      %td= listing.color
-      %td= listing.transmission
-      %td= listing.body_type
-      %td= listing.vehicle_type
+.container-fluid.container-listings
+  .row
+    - @search.listings.each do |listing|
+      .col-sm-6.col-md-6.col-xs-6
+        = link_to listing do
+          - if listing.vehicle_image
+            .img-thumbnail{:style => "border:none; background:white;"}
+              .image-container.img
+                = image_tag attachment_url(listing, :vehicle_image), size: "480x380"
+          %span.h3
+            = listing.year
+          %span.h3
+            = listing.make
+          %span.h3
+            = listing.model
