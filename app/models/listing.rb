@@ -1,3 +1,6 @@
 class Listing < ApplicationRecord
-  VEHICHLES = [ "", "Motorcycle", "Truck", "Car", "RV" ]
+  VEHICLES = [ "", "Motorcycle", "Truck", "Car", "RV" ]
+
+  attachment :vehicle_image
+  belongs_to :user
 end
