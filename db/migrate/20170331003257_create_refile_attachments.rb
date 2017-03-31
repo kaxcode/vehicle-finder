@@ -31,4 +31,3 @@ class CreateRefileAttachments < ActiveRecord::Migration
     drop_table :refile_attachments
   end
 end
-
