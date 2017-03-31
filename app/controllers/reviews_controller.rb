@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @users = User.all
   end
 
   # GET /reviews/1/edit
@@ -22,6 +23,7 @@ class ReviewsController < ApplicationController
   # POST /reviews
   def create
     @review = Review.new(review_params)
+    @users = User.all
 
     if @review.save
       redirect_to @review, notice: 'Review was successfully created.'

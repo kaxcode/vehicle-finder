@@ -11,13 +11,13 @@
           %li= msg
 
   .form-group
-    = f.label :review_body, class: 'col-sm-2 control-label'
+    = f.label "Seller", class: 'col-sm-2 control-label'
+    .col-sm-10
+      =f.select :user_id, options_from_collection_for_select(@users, :id, :name), prompt: "", class: "form-control"
+  .form-group
+    = f.label "Review", class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :review_body, class: 'form-control'
-  .form-group
-    = f.label :user, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :user, class: 'form-control'
   .form-group
     .col-sm-offset-2.col-sm-10
       = f.submit class: 'btn btn-primary'
