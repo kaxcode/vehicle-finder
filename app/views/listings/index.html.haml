@@ -17,6 +17,7 @@
         %th Transmission
         %th Body type
         %th Vehicle type
+        %th Vehicle Image
         %th{colspan: 3}
 
     %tbody
@@ -31,6 +32,9 @@
           %td= listing.transmission
           %td= listing.body_type
           %td= listing.vehicle_type
+          %td
+            - if listing.vehicle_image
+              = image_tag attachment_url(listing, :vehicle_image), size: "200x200"
           %td
             = link_to listing do
               %span.glyphicon.glyphicon-ok
