@@ -6,19 +6,20 @@
           - if listing.vehicle_image
             .img-thumbnail{:style => "border:none; background:white;"}
               .image-container.img
-                = image_tag attachment_url(listing, :vehicle_image), size: "520x380"
-          %span.h3
-            = listing.year
-          %span.h3
-            = listing.make
-          %span.h3
-            = listing.model
-          -# %span
-          -#   = link_to listing do
-          -#     %span.glyphicon.glyphicon-ok
-          -# %span
-          -#   = link_to edit_listing_path(listing) do
-          -#     %span.glyphicon.glyphicon-pencil
-          -# %span
-          -#   = link_to listing, data: { confirm: 'Are you sure?' }, method: :delete do
-          -#     %span.glyphicon.glyphicon-remove
+                = image_tag attachment_url(listing, :vehicle_image), size: "530x420"
+            .vehicle-metadata
+              %span.h3
+                = listing.year
+              %span.h3
+                = listing.make
+              %span.h3
+                = listing.model
+              -# %span
+              -#   = link_to listing do
+              -#     %span.glyphicon.glyphicon-ok
+              -# %span
+              -#   = link_to edit_listing_path(listing) do
+              -#     %span.glyphicon.glyphicon-pencil
+              -# %span
+              -#   = link_to listing, data: { confirm: 'Are you sure?' }, method: :delete do
+              -#     %span.glyphicon.glyphicon-remove
