@@ -1,28 +1,30 @@
-%dl.dl-horizontal
-  %dt Year:
-  %dd= @listing.year
-  %dt Make:
-  %dd= @listing.make
-  %dt Model:
-  %dd= @listing.model
-  %dt Description:
-  %dd= @listing.description
-  %dt Price:
-  %dd= @listing.price
-  %dt Color:
-  %dd= @listing.color
-  %dt Transmission:
-  %dd= @listing.transmission
-  %dt Body type:
-  %dd= @listing.body_type
-  %dt Vehichle type:
-  %dd= @listing.vehicle_type
-  %dt Seller's Name:
-  %dd= @listing.user.name
-  %dt Seller's Email:
-  %dd= mail_to @listing.user.email, "Contact Seller", subject: "Hi, I'm interested in your listing"
-  %dt Seller's Reviews:
-  %dd= link_to "Reviews", reviews_path(user_id: @listing.user.id)
+.show-listing-box
   .img-thumbnail{:style => "border:none; background:white;"}
     .image-container.img
       = image_tag attachment_url(@listing, :vehicle_image), size: "520x380"
+
+  %dl.dl-horizontal.col-md-6
+    %dt Year:
+    %dd= @listing.year
+    %dt Make:
+    %dd= @listing.make
+    %dt Model:
+    %dd= @listing.model
+    %dt Description:
+    %dd= @listing.description
+    %dt Price:
+    %dd= @listing.price
+    %dt Color:
+    %dd= @listing.color
+    %dt Transmission:
+    %dd= @listing.transmission
+    %dt Body type:
+    %dd= @listing.body_type
+    %dt Vehichle type:
+    %dd= @listing.vehicle_type
+    %dt Seller's Name:
+    %dd= @listing.user.name
+    %dt Seller's Email:
+    %dd= mail_to @listing.user.email, "Contact Seller", subject: "Hi, I'm interested in your listing"
+    %dt Seller's Reviews:
+    %dd= link_to "Reviews", reviews_path(user_id: @listing.user.id)
