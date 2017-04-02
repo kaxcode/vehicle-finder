@@ -1,8 +1,7 @@
 .page-header
   = link_to new_search_path, class: 'btn btn-default' do
-    %span.glyphicon.glyphicon-list-alt
     Back
-  %h1 Search Results
+  %h1.text-center Search Results
 .container-fluid.container-listings
   .row
     - @search.listings.each do |listing|
@@ -11,10 +10,11 @@
           - if listing.vehicle_image
             .img-thumbnail{:style => "border:none; background:white;"}
               .image-container.img
-                = image_tag attachment_url(listing, :vehicle_image), size: "480x380"
-          %span.h3
-            = listing.year
-          %span.h3
-            = listing.make
-          %span.h3
-            = listing.model
+                = image_tag attachment_url(listing, :vehicle_image), size: "530x420"
+            .vehicle-metadata
+              %span.h3
+                = listing.year
+              %span.h3
+                = listing.make
+              %span.h3
+                = listing.model
