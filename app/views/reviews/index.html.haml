@@ -1,13 +1,9 @@
-%h1 User Reviews
+%h1 Reviews
 
 .table-responsive
   %table.table.table-striped.table-bordered.table-hover
-    %thead
-      %tr
-        %th Review body
-        %th User
     %tbody
       - @reviews.each do |review|
         %tr
-          %td= review.review_body
           %td= review.user.name
+          %td= review.review_body
